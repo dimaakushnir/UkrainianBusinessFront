@@ -1549,6 +1549,11 @@ body.lock {
     margin: 0 0 12px 0;
   }
 }
+@media (max-width: 550px) {
+  .content-pay-item__block_wrap {
+    flex-direction: column;
+  }
+}
 .content-pay-item__block_border {
   padding: 11px 15px 11px 10px;
   background-color: #F2F2F2;

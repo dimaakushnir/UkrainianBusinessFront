@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "e-Ukraine";
   font-display: swap;
@@ -1558,7 +1559,6 @@ body.lock {
   padding: 11px 15px 11px 10px;
   background-color: #F2F2F2;
   border-radius: 10px;
-  overflow: hidden;
   border: 1px solid #FFD402;
 }
 .content-pay-item__block_border .block-with-label__text_copy {
@@ -1747,8 +1747,15 @@ body.lock {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.copy.copy-done {
-  animation: copy 0.3s ease-in;
+.copy.copy-done::after {
+  position: absolute;
+  content: "Скопійовано";
+  font-size: 14px;
+  font-weight: 300;
+  right: 20px;
+  top: -15px;
+  color: green;
+  animation: copy 2s linear;
 }
 .copy::before {
   position: absolute;
@@ -1813,15 +1820,36 @@ body.lock {
 
 @keyframes copy {
   0% {
-    transform: translate(0.5px, 0);
+    opacity: 1;
   }
-  33% {
-    transform: translate(0, 0);
+  10% {
+    opacity: 0.9;
   }
-  66% {
-    transform: translate(-0.5px, 0);
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
   }
   100% {
-    transform: translate(0, 0);
+    opacity: 0;
   }
 }

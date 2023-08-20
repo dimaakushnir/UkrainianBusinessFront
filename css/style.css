@@ -1767,6 +1767,22 @@ body.lock {
   background: url("../img/icons/copy.svg") center no-repeat;
 }
 
+.copy-this {
+  position: relative;
+}
+@media (max-width: 479.98px) {
+  .copy-this.copy-done::after {
+    position: absolute;
+    content: "Скопійовано";
+    font-size: 14px;
+    font-weight: 300;
+    right: 0px;
+    top: -20px;
+    color: green;
+    animation: copy 2s linear;
+  }
+}
+
 .block-big-text__info {
   font-family: e-Ukraine;
   font-size: 24px;
